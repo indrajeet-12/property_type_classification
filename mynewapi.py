@@ -23,7 +23,7 @@ def predict():
     prediction = model.predict(final_features)
 
 
-    return render_template('index1.html', prediction_text='Property Type Classified by the model is "{}"'.format(prediction[0]))
+    return render_template('index1.html', prediction_text='Property Type Recommended by the model is "{}"'.format(prediction[0]))
 
 
 if __name__ == "__main__":
