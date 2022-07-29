@@ -3,7 +3,7 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>Property Type Recommender</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -17,10 +17,10 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="host_total_listings_count" placeholder="Number of Properties of Host(Max Available 500)" required="required" />
+    	<input type="text" name="host_total_listings_count" placeholder="Properties of Host" required="required" />
         <input type="text" name="bedrooms" placeholder="Bedrooms Required" required="required" />
-		<input type="text" name="Price" placeholder="Enter Price per night(Maximum $1000)" required="required" />
-		  <input type="text" name="room_type_Private room" placeholder="(1-Private Room, 0-Shared Room)" required="required" />
+		<input type="text" name="Price" placeholder="Price per night(Max $1000)" required="required" />
+		  <input type="text" name="room_type_Private room" placeholder="(1-Private, 0-Shared Room)" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
